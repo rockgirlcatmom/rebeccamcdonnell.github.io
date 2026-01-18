@@ -3,51 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery</title>
+  <title>Gallery • Rebecca McDonnell</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Allura&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1 class="site-title">Gallery</h1>
-    <p class="tagline">Finds, favorites, and pieces I love</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-script">Rebecca</span>
+        <span class="brand-serif">McDonnell</span>
+      </a>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="shop.html">Stones for Sale</a>
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="links.html">Links</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="notice">
-      <strong>Available for Purchase</strong><br><br>
-      All stones shown are available for purchase.
-      For pricing or inquiries, please contact:<br><br>
-      📧 <strong>rebecca.mcdonnell@outlook.com</strong>
-    </div>
+    <section class="page-head">
+      <div class="container">
+        <h1 class="page-title">Gallery</h1>
+        <p class="page-subtitle">
+          A curated space for rock finds and videos. (We can add your photos/videos in neat rows next.)
+        </p>
+      </div>
+    </section>
 
-    <div class="divider"></div>
+    <section class="section">
+      <div class="container">
+        <div class="grid-3">
+          <div class="card">
+            <h2 class="card-title">Rock Finds</h2>
+            <p class="card-text">Add your favorite stones here — with names, locations, and quick notes.</p>
+            <p class="small">Next step: tell me your photo folder name and I’ll wire them in.</p>
+          </div>
 
-    <section class="gallery">
-      <img src="images/image-1766938996539.jpg" alt="Stone for sale" />
-      <img src="images/image-1766944712351.jpg" alt="Stone for sale" />
-      <img src="images/image-1767368065827.jpg" alt="Stone for sale" />
-      <img src="images/image-1767372792819.jpg" alt="Stone for sale" />
-      <img src="images/image-1768316216834.jpg" alt="Stone for sale" />
-      <img src="images/image-1768484563172.jpg" alt="Stone for sale" />
-      <img src="images/image-1768484599208.jpg" alt="Stone for sale" />
+          <div class="card">
+            <h2 class="card-title">Videos / Reels</h2>
+            <p class="card-text">We can embed your Instagram reel links or host videos directly.</p>
+            <p class="small">Easiest: paste a few reel links and I’ll format them.</p>
+          </div>
+
+          <div class="card card-highlight">
+            <h2 class="card-title">Instagram first</h2>
+            <p class="card-text">Your newest content lives here:</p>
+            <a class="btn btn-primary" href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">Open Instagram</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    © <span id="year"></span> Rebecca McDonnell
-  </footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Rebecca McDonnell</span>
+        <span class="footer-sep">•</span>
+        <a class="link" href="contact.html">Contact</a>
+      </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+      <div class="footer-right">
+        <a class="link" href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">Instagram</a>
+        <span class="footer-sep">•</span>
+        <a class="link" href="https://rebecca-mcdonnell.github.io" target="_blank" rel="noopener">Website</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
