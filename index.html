@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Rebecca McDonnell</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rebecca McDonnell</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-
-<div class="color-bar"></div>
-
-<header>
-    <h1>Rebecca McDonnell</h1>
-    <div class="tagline">simple things, beautiful finds</div>
+  <header>
+    <h1 class="site-title">Rebecca McDonnell</h1>
+    <p class="tagline">Rocks • Creativity • Niagara life</p>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
-</header>
+  </header>
 
-<div class="container">
+  <main>
+    <div class="panel">
+      <h2 class="h-cursive">Welcome</h2>
+      <div class="divider"></div>
 
-    <div class="intro">
-        Welcome to my personal space where I share 
-        <span>creativity</span>, rock collecting,
-        quiet moments, and the little things that make life beautiful.
+      <p>
+        This is my little corner of the internet for rock finds, creative projects,
+        and the moments that make me stop and look twice.
+      </p>
+
+      <p>
+        Want the day-to-day updates and new finds?
+        Follow me on Instagram:
+        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">
+          @rock.girl.cat.mom
+        </a>
+      </p>
+
+      <p>
+        <a class="btn" href="gallery.html">View the Gallery</a>
+        &nbsp;&nbsp;
+        <a class="btn" href="contact.html">Contact Me</a>
+      </p>
     </div>
+  </main>
 
-    <a class="button" href="gallery.html">View Gallery</a>
+  <footer>
+    © <span id="year"></span> Rebecca McDonnell
+  </footer>
 
-</div>
-
-<footer>
-© Rebecca McDonnell
-</footer>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
