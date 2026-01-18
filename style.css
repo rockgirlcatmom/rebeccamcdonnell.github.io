@@ -1,197 +1,151 @@
-/* ========= THEME ========= */
-:root{
-  --bg: #2f6f5b;          /* green background */
-  --panel: rgba(255,255,255,0.10);
-  --panel-2: rgba(255,255,255,0.14);
-  --text: #fff7fb;        /* warm near-white */
-  --muted: rgba(255,247,251,0.85);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style System — Rebecca McDonnell</title>
 
-  --pink: #ff7fb2;        /* blush pink accent */
-  --gold: #f4d06f;        /* warm gold accent */
-  --green-dark: #1f4f42;  /* deep green for shadows */
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
-/* ========= BASE ========= */
-*{ box-sizing:border-box; }
+  <style>
+    :root{
+      --bg1:#061711;
+      --bg2:#0b2a1f;
+      --text:#f6f3ee;
+      --muted: rgba(246,243,238,.72);
+      --pink:#f2b6c6;
+      --gold:#d8b15a;
+      --stroke: rgba(216,177,90,.52);
+      --shadow: 0 22px 60px rgba(0,0,0,.55);
+      --radius: 22px;
+      --card: rgba(255,255,255,.045);
+      --card2: rgba(255,255,255,.03);
+    }
 
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(1200px 800px at 20% 0%, rgba(255,127,178,0.18), transparent 60%),
-              radial-gradient(1200px 800px at 80% 0%, rgba(244,208,111,0.14), transparent 55%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-}
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 700px at 18% 12%, rgba(242,182,198,.13), transparent 60%),
+        radial-gradient(900px 650px at 85% 25%, rgba(216,177,90,.12), transparent 55%),
+        linear-gradient(135deg, var(--bg2) 0%, var(--bg1) 55%, #04110d 100%);
+      letter-spacing:.25px;
+    }
 
-a{
-  color: var(--pink);
-  text-decoration: none;
-  font-weight: 650;
-}
-a:hover{ text-decoration: underline; }
+    .wrap{ max-width: 1100px; margin: 0 auto; padding: 34px 18px 64px; }
+    .card{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      border: 1px solid rgba(216,177,90,.28);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
 
-main{
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 28px 18px 40px;
-}
+    .title{
+      font-weight: 200;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin: 0 0 6px;
+      color: rgba(246,243,238,.9);
+    }
+    .script{
+      font-family: "Great Vibes", cursive;
+      color: var(--gold);
+      font-size: 44px;
+      margin: 0 0 10px;
+      line-height: 1;
+    }
+    .p{ margin:0; color: var(--muted); font-weight:300; line-height:1.7; }
 
-/* ========= HEADER + NAV ========= */
-header{
-  padding: 34px 18px 18px;
-  text-align: center;
-}
+    .row{ display:flex; gap: 12px; flex-wrap:wrap; margin-top: 16px; }
+    .chip{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border-radius:999px;
+      border: 1px solid rgba(216,177,90,.32);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight:300;
+    }
+    .swatch{ width:14px; height:14px; border-radius:999px; }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    @media(max-width:900px){ .grid{ grid-template-columns:1fr; } }
+    .box{
+      border-radius: 18px;
+      border: 1px solid rgba(216,177,90,.18);
+      background: rgba(255,255,255,.02);
+      padding: 16px;
+    }
+    .box h3{ margin:0 0 8px; font-weight:300; letter-spacing:1px; text-transform:uppercase; font-size:14px; }
+    .box p{ margin:0; color:var(--muted); font-weight:300; line-height:1.6; font-size:13.5px; }
 
-.site-title{
-  margin: 0;
-  font-size: 34px;
-  letter-spacing: 0.4px;
-}
+    .btnRow{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn{
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(216,177,90,.45);
+      background: rgba(216,177,90,.10);
+      color: var(--text);
+      font-weight: 300;
+      font-size: 13px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .btn.secondary{
+      background: rgba(242,182,198,.08);
+      border-color: rgba(242,182,198,.40);
+    }
+  </style>
+</head>
 
-.tagline{
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 16px;
-}
+<body>
+  <main class="wrap">
+    <div class="card">
+      <div class="title">Style System</div>
+      <div class="script">Rebecca McDonnell</div>
+      <p class="p">
+        This page is a sandbox to preview your colors, typography, borders, and buttons.
+        Once you love this, we copy it into the real site.
+      </p>
 
-nav{
-  display:flex;
-  justify-content:center;
-  gap: 18px;
-  flex-wrap:wrap;
-  margin-top: 16px;
-}
+      <div class="row">
+        <div class="chip"><span class="swatch" style="background:#0b2a1f"></span>Forest</div>
+        <div class="chip"><span class="swatch" style="background:#f2b6c6"></span>Blush</div>
+        <div class="chip"><span class="swatch" style="background:#d8b15a"></span>Gold</div>
+      </div>
 
-nav a{
-  color: var(--text);
-  font-weight: 700;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(244,208,111,0.38);
-  background: rgba(31,79,66,0.20);
-}
+      <div class="grid">
+        <div class="box">
+          <h3>Thin Typography</h3>
+          <p>Inter weights 200–300 keep it subtle, modern, and elegant.</p>
+        </div>
+        <div class="box">
+          <h3>Gold Script Accent</h3>
+          <p>Use cursive only for section titles and accents so it stays classy.</p>
+        </div>
+        <div class="box">
+          <h3>Gold Borders</h3>
+          <p>Soft outlines add luxury without looking harsh or “blingy.”</p>
+        </div>
+      </div>
 
-nav a:hover{
-  background: rgba(255,127,178,0.18);
-  border-color: rgba(255,127,178,0.55);
-  text-decoration:none;
-}
-
-/* ========= PANELS / CARDS ========= */
-.panel{
-  background: var(--panel);
-  border: 1px solid rgba(244,208,111,0.35);
-  border-radius: 16px;
-  padding: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-}
-
-.panel + .panel{ margin-top: 16px; }
-
-.divider{
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(244,208,111,0.75), transparent);
-  margin: 18px 0;
-}
-
-.h-cursive{
-  font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", cursive;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  margin: 0 0 8px;
-  font-size: 30px;
-  color: var(--gold);
-}
-
-/* ========= BUTTON ========= */
-.btn{
-  display:inline-block;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(244,208,111,0.55);
-  background: rgba(255,127,178,0.16);
-  color: var(--text);
-  font-weight: 750;
-}
-
-.btn:hover{
-  background: rgba(255,127,178,0.24);
-  text-decoration:none;
-}
-
-/* ========= GALLERY ========= */
-.gallery{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 12px;
-}
-
-.gallery img{
-  width:100%;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid rgba(244,208,111,0.45);
-  background: rgba(255,255,255,0.08);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.20);
-}
-
-/* ========= NOTICE ========= */
-.notice{
-  background: var(--panel-2);
-  border: 1px solid rgba(244,208,111,0.50);
-  border-radius: 16px;
-  padding: 16px;
-}
-
-.notice strong{ color: var(--gold); }
-
-/* ========= FORMS ========= */
-form{
-  display:flex;
-  flex-direction:column;
-  gap: 12px;
-}
-
-input, textarea{
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 14px;
-  border: 1px solid rgba(244,208,111,0.45);
-  background: rgba(31,79,66,0.22);
-  color: var(--text);
-  outline: none;
-}
-
-input::placeholder, textarea::placeholder{
-  color: rgba(255,247,251,0.70);
-}
-
-textarea{
-  min-height: 140px;
-  resize: vertical;
-}
-
-button{
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(244,208,111,0.55);
-  background: rgba(255,127,178,0.18);
-  color: var(--text);
-  font-size: 16px;
-  font-weight: 800;
-}
-
-button:hover{
-  background: rgba(255,127,178,0.26);
-  cursor: pointer;
-}
-
-/* ========= FOOTER ========= */
-footer{
-  text-align:center;
-  padding: 26px 18px 40px;
-  color: rgba(255,247,251,0.78);
-  font-size: 14px;
-}
+      <div class="btnRow">
+        <span class="btn">Primary Button</span>
+        <span class="btn secondary">Secondary Button</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
