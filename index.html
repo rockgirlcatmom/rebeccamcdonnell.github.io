@@ -698,4 +698,123 @@
           </div>
 
           <div class="saleCard">
-            <div class="media"><div class="ph"
+            <div class="media"><div class="ph">add image</div></div>
+            <div class="cap">
+              <div class="saleTop">
+                <p class="t" style="margin:0;">Item 02</p>
+                <span class="priceTag">$00</span>
+              </div>
+              <p class="m">Short details (size, type, where found) • optional shipping note</p>
+            </div>
+          </div>
+
+          <div class="saleCard">
+            <div class="media"><div class="ph">add image</div></div>
+            <div class="cap">
+              <div class="saleTop">
+                <p class="t" style="margin:0;">Item 03</p>
+                <span class="priceTag">$00</span>
+              </div>
+              <p class="m">Short details (size, type, where found) • optional shipping note</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn" href="contact.html">Inquire / Buy</a>
+          <a class="btn secondary" href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">DM on Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME & CATS -->
+    <section id="home">
+      <div class="sectionCard">
+        <div class="sectionTitleRow">
+          <h2 class="sectionTitle">Home & Cats</h2>
+          <p class="sectionSub">
+            Cozy home life, your cats, and the sweet daily moments. (Placeholders until you upload.)
+          </p>
+        </div>
+
+        <div class="galleryGrid">
+          <div class="shot" data-full="" data-title="Home 01" data-meta="Cat names • optional note">
+            <div class="media"><div class="ph">add image</div></div>
+            <div class="cap"><p class="t">Home 01</p><p class="m">Cat names • optional note</p></div>
+          </div>
+
+          <div class="shot" data-full="" data-title="Home 02" data-meta="Cat names • optional note">
+            <div class="media"><div class="ph">add image</div></div>
+            <div class="cap"><p class="t">Home 02</p><p class="m">Cat names • optional note</p></div>
+          </div>
+
+          <div class="shot" data-full="" data-title="Home 03" data-meta="Cat names • optional note">
+            <div class="media"><div class="ph">add image</div></div>
+            <div class="cap"><p class="t">Home 03</p><p class="m">Cat names • optional note</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerCard">
+        <div style="font-family:'Great Vibes', cursive; color: var(--gold); font-size: 34px; line-height: 1;">
+          thank you for visiting
+        </div>
+        <div class="small">© <span id="y"></span> Rebecca McDonnell • Built on GitHub Pages</div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Lightbox (only opens if an image exists) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lbCard" role="dialog" aria-modal="true" aria-label="Image preview">
+      <img class="lbImg" id="lbImg" alt="Preview">
+      <div class="lbCap">
+        <p class="t" id="lbTitle"></p>
+        <p class="m" id="lbMeta"></p>
+        <div class="lbHint">Tap outside the image (or press Esc) to close.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lbImg");
+    const lbTitle = document.getElementById("lbTitle");
+    const lbMeta = document.getElementById("lbMeta");
+
+    function openLB(src, title, meta){
+      if(!src) return;
+      lbImg.src = src;
+      lbTitle.textContent = title || "";
+      lbMeta.textContent = meta || "";
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden", "false");
+    }
+    function closeLB(){
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden", "true");
+      lbImg.src = "";
+    }
+
+    // Open only when the card contains an <img> AND it loaded OR when data-full is provided
+    document.querySelectorAll(".shot").forEach(card => {
+      card.addEventListener("click", () => {
+        const img = card.querySelector("img");
+        const hasImg = img && img.complete && img.naturalWidth > 0;
+        const full = card.dataset.full || (hasImg ? img.src : "");
+        if(!full) return;
+
+        openLB(full, card.dataset.title, card.dataset.meta);
+      });
+    });
+
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLB(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLB(); });
+  </script>
+</body>
+</html>
