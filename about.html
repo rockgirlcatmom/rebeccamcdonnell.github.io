@@ -3,62 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
+  <title>About • Rebecca McDonnell</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Allura&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1 class="site-title">About</h1>
-    <p class="tagline">A little more about me</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-script">Rebecca</span>
+        <span class="brand-serif">McDonnell</span>
+      </a>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="shop.html">Stones for Sale</a>
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="links.html">Links</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="panel">
-      <h2 class="h-cursive">Hi, I’m Rebecca</h2>
-      <div class="divider"></div>
+    <section class="page-head">
+      <div class="container">
+        <h1 class="page-title">About Me</h1>
+        <p class="page-subtitle">
+          Collected with intention — rocks, vintage finds, cozy life details, and the Niagara region.
+        </p>
+      </div>
+    </section>
 
-      <p>
-        I moved to <strong>St. Catharines</strong> this fall and I’m genuinely excited to be in the
-        <strong>Niagara region</strong> — the water, the green spaces, and that “new chapter” feeling
-        you get when a place starts to feel like home.
-      </p>
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2 class="card-title">Hi, I’m Rebecca.</h2>
+          <p class="card-text">
+            I’m a rockhounder with a soft spot for beautiful details — polished edges, old wood, warm light,
+            and the kind of finds that make you stop and smile. I recently moved to <strong>St. Catharines</strong>
+            this fall and I’m genuinely excited to be in the <strong>Niagara region</strong> — beaches, trails, and all.
+          </p>
+          <p class="card-text">
+            This site is my curated corner: stones I’ve collected, small drops for sale, and a place to keep
+            my favorite moments (and videos) all in one home.
+          </p>
+          <p class="card-text">
+            Also: I’m a proud cat mom. My crew includes <strong>Olive, Puzzle, Finn, Nala,</strong> and <strong>Smokey</strong>.
+            I also had <strong>Caesar</strong>, who passed away — and is still part of my story.
+          </p>
+          <p class="small">
+            Follow along on Instagram: <a class="link" href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">rock.girl.cat.mom</a>
+          </p>
+        </div>
 
-      <p>
-        I’m naturally curious and a little obsessed with small details, which is probably why rock collecting
-        stuck so quickly. It started as something calming and fun… and then I blinked and suddenly I had
-        a whole collection (and a camera roll full of “look at this one!!”).
-      </p>
+        <div class="card card-highlight">
+          <h2 class="card-title">The vibe</h2>
+          <p class="card-text">
+            Forest green, gold, and a little blush-pink — simple, modern, and quietly expensive.
+            Clean lines. Soft borders. No clutter.
+          </p>
 
-      <p>
-        This site is where I share my finds, creative projects, and little updates as I explore Niagara.
-        Some stones are available for purchase, others are just here to be appreciated — either way, every
-        piece has a story behind it.
-      </p>
+          <div class="card-line"></div>
 
-      <p>
-        You can also follow along on Instagram:
-        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">
-          @rock.girl.cat.mom
-        </a>
-      </p>
-    </div>
+          <h3 class="card-title" style="font-size:18px;">What you’ll find here</h3>
+          <p class="card-text">• Stones for sale with clear photos + honest descriptions</p>
+          <p class="card-text">• Gallery pages for videos + rock finds</p>
+          <p class="card-text">• Quick blog notes and collecting updates</p>
+
+          <div class="hero-actions" style="margin-top:14px;">
+            <a class="btn btn-primary" href="shop.html">Shop Stones</a>
+            <a class="btn btn-ghost" href="gallery.html">View Gallery</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    © <span id="year"></span> Rebecca McDonnell
-  </footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Rebecca McDonnell</span>
+        <span class="footer-sep">•</span>
+        <a class="link" href="contact.html">Contact</a>
+      </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+      <div class="footer-right">
+        <a class="link" href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">Instagram</a>
+        <span class="footer-sep">•</span>
+        <a class="link" href="https://rebecca-mcdonnell.github.io" target="_blank" rel="noopener">Website</a>
+      </div>
+    </div>
+  </footer>
 </body>
-</html>
+          </html>
