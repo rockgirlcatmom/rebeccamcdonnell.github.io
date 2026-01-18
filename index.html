@@ -1,1 +1,92 @@
-<link rel="stylesheet" href="style.css?v=5">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebecca McDonnell</title>
+  <!-- force refresh -->
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <div class="brand">Rebecca McDonnell</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="links.html">Links</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="kicker">rocks · cats · quiet joy</div>
+    <h1>Welcome.</h1>
+    <p class="lead">
+      A softly curated space for rock finds, shoreline days, cats, and the slower,
+      grounded moments of everyday life.
+    </p>
+
+    <div class="btnrow">
+      <a class="btn primary" href="gallery.html">Explore the gallery</a>
+      <a class="btn gold" href="about.html">My story</a>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="split">
+    <div class="panel">
+      <h2>What lives here</h2>
+      <div class="list">
+        <div class="item">
+          <strong>Rock-hounding</strong>
+          <span>Finds, identifications, and beach discoveries.</span>
+        </div>
+        <div class="item">
+          <strong>My cats</strong>
+          <span>Olive, Puzzle, Finn, Nala, Smokey — and Caesar always.</span>
+        </div>
+        <div class="item">
+          <strong>Simple living</strong>
+          <span>Small projects, routines, and reflections.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Begin here</h2>
+      <div class="list">
+        <div class="item">
+          <strong>New visitor</strong>
+          <span>The About page gives the full picture.</span>
+        </div>
+        <div class="item">
+          <strong>Here for rocks</strong>
+          <span>The Gallery is the heart of the site.</span>
+        </div>
+        <div class="item">
+          <strong>Updates & writing</strong>
+          <span>The Blog will grow over time.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © <span id="y"></span> Rebecca McDonnell
+  </div>
+
+</div>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
