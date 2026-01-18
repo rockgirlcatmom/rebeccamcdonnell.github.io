@@ -1,1 +1,9 @@
-
+<section id="sale">
+...
+<div class="grid">
+  <div class="tile"...>Item 01...</div>
+  <div class="tile"...>Item 02...</div>
+  <div class="tile"...>Item 03...</div>
+</div>
+...
+</section>
