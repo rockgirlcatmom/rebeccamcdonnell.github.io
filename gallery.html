@@ -1,9 +1,42 @@
-<section class="gallery">
-  <img src="images/image-1766938996539.jpg" alt="Rock find">
-  <img src="images/image-1766944712351.jpg" alt="Rock find">
-  <img src="images/image-1767368065827.jpg" alt="Rock find">
-  <img src="images/image-1767372792819.jpg" alt="Rock find">
-  <img src="images/image-1768316216834.jpg" alt="Rock find">
-  <img src="images/image-1768484563172.jpg" alt="Rock find">
-  <img src="images/image-1768484599208.jpg" alt="Rock find">
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      padding: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="gallery">
+    <img src="images/image-1766938996539.jpg" alt="Rock find">
+    <img src="images/image-1766944712351.jpg" alt="Rock find">
+    <img src="images/image-1767368065827.jpg" alt="Rock find">
+    <img src="images/image-1767372792819.jpg" alt="Rock find">
+    <img src="images/image-1768316216834.jpg" alt="Rock find">
+    <img src="images/image-1768484563172.jpg" alt="Rock find">
+    <img src="images/image-1768484599208.jpg" alt="Rock find">
+  </section>
+</body>
+</html>
