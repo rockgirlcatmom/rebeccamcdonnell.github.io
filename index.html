@@ -1,90 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rebecca McDonnell</title>
+<meta charset="UTF-8">
+<title>Rebecca McDonnell</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #ffffff;
-      color: #333;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #123d2b, #0f2b1f);
+    color: #f7efe6;
+}
 
-    header {
-      padding: 28px 20px;
-      text-align: center;
-    }
+header {
+    text-align: center;
+    padding: 30px 15px;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      margin-top: 12px;
-      flex-wrap: wrap;
-    }
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.6rem;
+    color: #e7c77c;
+    letter-spacing: 1px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #4a7c59;
-      font-weight: 600;
-    }
+nav a {
+    margin: 0 10px;
+    color: #9fd3b2;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a:hover {
+    color: #f3a6c9;
+}
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      line-height: 1.7;
-      font-size: 18px;
-    }
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
 
-    .cta {
-      margin-top: 40px;
-      padding: 20px;
-      background: #f3f7f5;
-      border-left: 5px solid #4a7c59;
-      border-radius: 12px;
-    }
+.card {
+    background: rgba(255,255,255,0.07);
+    border-left: 6px solid #9fd3b2;
+    border-radius: 18px;
+    padding: 22px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 
-    .cta a {
-      color: #4a7c59;
-      font-weight: 600;
-      text-decoration: none;
-    }
-  </style>
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.note {
+    color: #f3a6c9;
+    font-style: italic;
+}
+
+.highlight {
+    color: #e7c77c;
+    font-weight: bold;
+}
+
+button {
+    background: linear-gradient(45deg, #e7c77c, #f3a6c9);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Rebecca McDonnell</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <h1>Rebecca McDonnell</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<main>
-  <p>
-    Welcome to my personal space where I share creativity, rock collecting,
-    everyday finds, and the things that make me happy.
-  </p>
+<div class="container">
 
-  <div class="cta">
-    Interested in a piece you see or want to follow along with my finds?<br><br>
-    Visit the <a href="gallery.html">Gallery</a> or connect with me on
-    <a href="https://instagram.com/rock.girl.cat.mom" target="_blank">Instagram</a>.
-  </div>
-</main>
+<div class="card">
+<p>
+Welcome to my little corner of the internet where I share
+<span class="highlight">rock finds, creativity, cats, and everyday joy.</span>
+</p>
+
+<p class="note">
+Some days it’s fossils. Some days it’s glittery stones.  
+Some days it’s just things that made me smile.
+</p>
+</div>
+
+<div class="card">
+<p>
+Interested in a piece you see or want to follow along with my finds?
+</p>
+
+<p>
+Visit the <span class="highlight">Gallery</span> or connect with me on  
+<a href="https://instagram.com/rock.girl.cat.mom" target="_blank" style="color:#f3a6c9;">Instagram</a>.
+</p>
+
+<button onclick="location.href='gallery.html'">Explore the Gallery</button>
+</div>
+
+</div>
 
 </body>
 </html>
