@@ -3,51 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Contact Us • Rebecca McDonnell</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1:#061711;
+      --bg2:#0b2a1f;
+      --panel: rgba(255,255,255,.045);
+      --panel2: rgba(255,255,255,.03);
+
+      --text:#f6f3ee;
+      --muted: rgba(246,243,238,.72);
+
+      --pink:#f2b6c6;
+      --gold:#d8b15a;
+
+      --shadow: 0 22px 60px rgba(0,0,0,.55);
+      --radius: 22px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 700px at 18% 12%, rgba(242,182,198,.13), transparent 60%),
+        radial-gradient(900px 650px at 85% 25%, rgba(216,177,90,.12), transparent 55%),
+        linear-gradient(135deg, var(--bg2) 0%, var(--bg1) 55%, #04110d 100%);
+      letter-spacing:.25px;
+      overflow-x:hidden;
+      min-height: 100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(6,23,17,.78), rgba(6,23,17,.35));
+      border-bottom: 1px solid rgba(216,177,90,.18);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      max-width:1100px;
+      margin:0 auto;
+      padding: 12px 18px;
+    }
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+    .brand .name{
+      font-weight:200;
+      letter-spacing:6px;
+      text-transform:uppercase;
+      font-size:14px;
+      white-space:nowrap;
+    }
+    .brand .accent{
+      font-family:"Great Vibes", cursive;
+      color: var(--gold);
+      font-size:26px;
+      margin-top:2px;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-end;
+      align-items:center;
+    }
+    .links a{
+      font-weight:300;
+      font-size:13px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease;
+    }
+    .links a:hover{
+      transform: translateY(-1px);
+      border-color: rgba(216,177,90,.35);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+    }
+
+    main{ max-width: 1100px; margin: 0 auto; padding: 28px 18px 64px; width:100%; flex:1; }
+
+    .card{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border: 1px solid rgba(216,177,90,.28);
+      box-shadow: var(--shadow);
+      padding: 34px 26px;
+    }
+
+    h1{
+      margin: 0 0 10px;
+      font-weight: 200;
+      font-size: 42px;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+    .script{
+      font-family:"Great Vibes", cursive;
+      color: var(--gold);
+      font-size: 42px;
+      margin: 0 0 14px;
+      line-height: 1;
+    }
+    p{
+      margin: 0;
+      color: var(--muted);
+      font-weight:300;
+      line-height: 1.7;
+      max-width: 78ch;
+    }
+
+    .row{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(216,177,90,.45);
+      background: rgba(216,177,90,.10);
+      color: var(--text);
+      font-weight: 300;
+      font-size: 13px;
+    }
+    .btn.secondary{
+      background: rgba(242,182,198,.08);
+      border-color: rgba(242,182,198,.40);
+    }
+
+    .note{
+      margin-top: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(242,182,198,.22);
+      background: rgba(242,182,198,.06);
+      padding: 14px;
+      color: rgba(246,243,238,.86);
+      font-weight:300;
+      line-height:1.6;
+      font-size: 13.5px;
+    }
+
+    footer{
+      padding: 0 18px 18px;
+      text-align:center;
+      color: rgba(246,243,238,.55);
+      font-size: 12px;
+      font-weight:300;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1 class="site-title">Contact</h1>
-    <p class="tagline">Say hi, ask a question, or inquire about a piece</p>
+    <div class="nav">
+      <div class="brand">
+        <div class="name">Rebecca McDonnell</div>
+        <div class="accent">Contact</div>
+      </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <nav class="links" aria-label="Primary">
+        <a href="index.html#rocks">Rocks for Sale</a>
+        <a href="index.html#home">Home & Cats</a>
+        <a href="index.html">Home</a>
+        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="panel">
-      <h2 class="h-cursive">Message Me</h2>
-      <div class="divider"></div>
-
-      <form>
-        <input type="text" name="name" placeholder="Name" />
-        <input type="tel" name="phone" placeholder="Phone Number" />
-        <input type="email" name="email" placeholder="Email Address" />
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div class="divider"></div>
-
+    <div class="card">
+      <div class="script">Contact Us</div>
+      <h1>Let’s connect</h1>
       <p>
-        Prefer email? 📧 <strong>rebecca.mcdonnell@outlook.com</strong>
+        For rock inquiries, pricing, collaborations, or questions, reach out below.
+        (When you’re ready, replace the email address in the button.)
       </p>
+
+      <div class="row">
+        <a class="btn" href="mailto:hello@example.com">Email</a>
+        <a class="btn secondary" href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">DM on Instagram</a>
+      </div>
+
+      <div class="note">
+        <strong style="color:#f6f3ee; font-weight:300;">Rocks for sale:</strong>
+        If you’re messaging about an item, include the item name (or screenshot) so I can confirm availability.
+      </div>
     </div>
   </main>
 
-  <footer>
-    © <span id="year"></span> Rebecca McDonnell
-  </footer>
+  <footer>© <span id="y"></span> Rebecca McDonnell • Built on GitHub Pages</footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
+  </html>
